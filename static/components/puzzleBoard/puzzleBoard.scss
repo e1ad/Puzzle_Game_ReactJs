@@ -1,0 +1,36 @@
+$imgSrc : "https://images.pexels.com/photos/356378/pexels-photo-356378.jpeg?auto=compress&cs=tinysrgb&h=350";
+$cellHeight:100px;
+$emptyCellColor:black;
+
+.comp.puzzle-board{
+
+    margin: 0 auto;
+
+    > table{
+        width: 100%;
+    }
+
+    td{
+        &:not(.empty){
+            background-image: url($imgSrc);
+            background-repeat: no-repeat;
+        }
+        &.empty{
+            background-color: $emptyCellColor;
+        }
+
+        min-width: $cellHeight;
+        height: $cellHeight;
+    }
+
+    > .controllers{
+        margin-top: 10px;
+        button,
+        .ib,
+        .ib >  span{
+            margin-right: 5px;
+        }
+        
+    }
+
+}

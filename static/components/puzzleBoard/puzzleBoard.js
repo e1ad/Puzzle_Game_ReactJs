@@ -27,9 +27,9 @@ class PuzzleBoard extends React.Component {
 
     renderCells(row, rowIndex) {
         return row.map((item, colIndex) => {
-            let x = (item.row) * 100 / (Store.boardSize - 1);
-            let y = (item.col) * 100 / (Store.boardSize - 1);
-            let style = {
+            const x = (item.row) * 100 / (Store.boardSize - 1);
+            const y = (item.col) * 100 / (Store.boardSize - 1);
+            const style = {
                 "backgroundSize": `${Store.boardSize * 100}% ${Store.boardSize * 100}%`,
                 "backgroundPosition": `${y}% ${x}%`,
                 "width": `${100 / Store.boardSize}%`
